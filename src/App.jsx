@@ -14,14 +14,37 @@ function App() {
     target: { current: containerNode },
     offset: ["start start", "end end"]
   });
-  const [currentFrame, setCurrentFrame] = useState(1);
+  const canvasRef = useRef(null);
+  const imagesRef = useRef([]);
 
   // Map scroll progress → frame number
   const frameIndex = useTransform(scrollYProgress, [0, 1], [1, 240]);
+  
+  // Occasional re-render trigger to keep Framer Motion string templates perfectly synced
+  const [renderTick, setRenderTick] = useState(0);
 
-  // Watch frame index to update the image
+  // Watch frame index to update the canvas
   useMotionValueEvent(frameIndex, 'change', (latest) => {
-    setCurrentFrame(Math.round(latest));
+    const frameNumber = Math.round(latest);
+    if (imagesRef.current[frameNumber] && canvasRef.current) {
+      const img = imagesRef.current[frameNumber];
+      if (img.complete && img.width > 0) {
+        const canvas = canvasRef.current;
+        const ctx = canvas.getContext('2d');
+        // Ensure canvas matches image dimensions
+        if (canvas.width !== img.width || canvas.height !== img.height) {
+          canvas.width = img.width;
+          canvas.height = img.height;
+        }
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(img, 0, 0);
+      }
+    }
+    
+    // Force a lightweight re-render every 10 frames (instead of every 1 frame) to wake up motion.divs
+    if (frameNumber % 10 === 0 && renderTick !== frameNumber) {
+      setRenderTick(frameNumber);
+    }
   });
 
   // ─── Preload all frames ───────────────────────────────────────────────────
@@ -29,6 +52,20 @@ function App() {
     for (let i = 1; i <= 240; i++) {
       const img = new Image();
       img.src = `/frames/ezgif-frame-${String(i).padStart(3, '0')}.jpg`;
+      imagesRef.current[i] = img;
+
+      // Draw the first frame when it loads
+      if (i === 1) {
+        img.onload = () => {
+          if (canvasRef.current) {
+            const canvas = canvasRef.current;
+            const ctx = canvas.getContext('2d');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            ctx.drawImage(img, 0, 0);
+          }
+        };
+      }
     }
   }, []);
 
@@ -384,10 +421,7 @@ function App() {
 
               {/* Centre bottle — frame-by-frame scroll animation */}
               <motion.div className="center-bottle">
-                <img
-                  src={`/frames/ezgif-frame-${String(currentFrame).padStart(3, '0')}.jpg`}
-                  alt="Coca Cola Glass Animation"
-                />
+                <canvas ref={canvasRef}></canvas>
               </motion.div>
 
               {/* Phase C — Classic Label (slides/fades with cans) */}

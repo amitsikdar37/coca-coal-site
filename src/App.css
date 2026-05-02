@@ -251,7 +251,7 @@ body {
   pointer-events: none;
 }
 
-.center-bottle img {
+.center-bottle canvas {
   height: 100%;
   width: auto;
   object-fit: contain;
