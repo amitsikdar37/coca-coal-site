@@ -1612,3 +1612,54 @@ body {
     right: -20%;
   }
 }
+
+/* ─── Mobile Responsiveness ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+    flex-wrap: wrap;
+    height: auto;
+  }
+  
+  .nav-brand {
+    height: 1.5rem;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+  }
+
+  .nav-right {
+    gap: 0.8rem;
+  }
+
+  .nav-timer {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+  }
+
+  .shop-now-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-title {
+    font-size: clamp(2.2rem, 10vw, 3.5rem);
+  }
+  
+  .hero-subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    margin-top: 1rem;
+  }
+}
