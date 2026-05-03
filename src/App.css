@@ -1653,6 +1653,10 @@ body {
     letter-spacing: 0.1em;
   }
 
+  .hero-branding {
+    margin-top: -6rem; /* Shift the text further upper */
+  }
+
   .hero-title {
     font-size: clamp(2.2rem, 10vw, 3.5rem);
   }
@@ -1661,5 +1665,46 @@ body {
     font-size: 0.65rem;
     letter-spacing: 0.3em;
     margin-top: 1rem;
+  }
+
+  .collection-heading {
+    font-size: clamp(1.8rem, 8vw, 2.5rem);
+  }
+
+  .collection-eyebrow {
+    font-size: 0.5rem;
+    letter-spacing: 0.3em;
+  }
+
+  .center-bottle {
+    height: 45vh; /* Make glass bottle smaller */
+    top: 45%; /* Shift bottle slightly upward */
+  }
+
+  .product-can {
+    bottom: 33%; /* Raise cans to stand on the same grey floor as the bottle */
+  }
+
+  .product-can img {
+    height: 15vh; /* Make cans smaller to fit side-by-side */
+  }
+
+  .can-label {
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
+  }
+
+  .can-diet {
+    left: -2%; 
+  }
+
+  .can-zero {
+    right: -2%; 
+  }
+
+  .center-label-standalone {
+    font-size: 0.5rem;
+    letter-spacing: 0.1em;
+    bottom: 33%; /* Match the cans' new position */
   }
 }
