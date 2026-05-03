@@ -542,7 +542,8 @@ body {
 /* ─── Phase C: Product Cans ──────────────────────────────────────────────── */
 .product-can {
   position: absolute;
-  bottom: 8%;          /* aligns base with the reflective grey floor */
+  bottom: 8%;
+  /* aligns base with the reflective grey floor */
   z-index: 6;
   display: flex;
   flex-direction: column;
@@ -551,8 +552,13 @@ body {
   /* initial off-screen state set by GSAP */
 }
 
-.can-diet  { left: 7%; }
-.can-zero  { right: 7%; }
+.can-diet {
+  left: 7%;
+}
+
+.can-zero {
+  right: 7%;
+}
 
 .product-can img {
   height: 48vh;
@@ -564,8 +570,7 @@ body {
 }
 
 .product-can:hover img {
-  filter: drop-shadow(0 35px 60px rgba(244, 0, 9, 0.4))
-          drop-shadow(0 0 30px rgba(244, 0, 9, 0.2));
+  filter: drop-shadow(0 35px 60px rgba(244, 0, 9, 0.4)) drop-shadow(0 0 30px rgba(244, 0, 9, 0.2));
 }
 
 .can-diet:hover img {
@@ -630,7 +635,8 @@ body {
   background-size: cover;
   background-position: center;
   filter: blur(8px);
-  transform: scale(1.1); /* Slightly more scale for better parallax range */
+  transform: scale(1.1);
+  /* Slightly more scale for better parallax range */
   will-change: transform;
 }
 
@@ -640,7 +646,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(10,5,5,0.7) 30%, rgba(10,5,5,0.7) 70%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(10, 5, 5, 0.7) 30%, rgba(10, 5, 5, 0.7) 70%, rgba(0, 0, 0, 1) 100%);
 }
 
 .legacy-content {
@@ -654,14 +660,16 @@ body {
 .reveal-wrapper {
   display: block;
   overflow: hidden;
-  margin-bottom: -0.2em; /* Tighten reveal containers */
+  margin-bottom: -0.2em;
+  /* Tighten reveal containers */
 }
 
 .stagger-el {
   display: block;
 }
 
-.legacy-sec-1, .legacy-sec-2 {
+.legacy-sec-1,
+.legacy-sec-2 {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -688,7 +696,8 @@ body {
   font-family: var(--font-body);
   font-size: 0.75rem;
   font-weight: 700;
-  letter-spacing: 0.4em; /* More premium spacing */
+  letter-spacing: 0.4em;
+  /* More premium spacing */
   color: var(--primary);
   margin-bottom: 2rem;
   text-transform: uppercase;
@@ -696,7 +705,8 @@ body {
 
 .legacy-title {
   font-family: var(--font-display);
-  font-size: clamp(3.5rem, 8vw, 6.5rem); /* Larger more impactful */
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  /* Larger more impactful */
   font-weight: 900;
   line-height: 0.9;
   letter-spacing: -0.04em;
@@ -849,7 +859,7 @@ body {
     gap: 3rem;
     text-align: center;
   }
-  
+
   .footer-center {
     flex-wrap: wrap;
     justify-content: center;
@@ -991,7 +1001,7 @@ body {
   height: 85%;
   object-fit: contain;
   transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
 }
 
 .catalog-card:hover .card-image-box img {
@@ -1026,7 +1036,8 @@ body {
   margin-top: auto;
 }
 
-.btn-quick, .btn-shop {
+.btn-quick,
+.btn-shop {
   padding: 1rem;
   border-radius: 1rem;
   font-family: var(--font-body);
@@ -1065,12 +1076,12 @@ body {
   .catalog-container {
     grid-template-columns: 1fr;
   }
-  
+
   .filter-sidebar {
     position: relative;
     top: 0;
   }
-  
+
   .catalog-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1085,7 +1096,8 @@ body {
 /* ─── Heritage View ──────────────────────────────────────────────────────── */
 
 .heritage-view {
-  background-color: #050101; /* Very dark red/black */
+  background-color: #050101;
+  /* Very dark red/black */
   color: #fff;
   min-height: 200vh;
   position: relative;
@@ -1199,7 +1211,8 @@ body {
 }
 
 .heritage-btn-primary {
-  background-color: #600000; /* Darker red for premium feel */
+  background-color: #600000;
+  /* Darker red for premium feel */
   box-shadow: 0 10px 30px rgba(96, 0, 0, 0.4);
 }
 
@@ -1310,11 +1323,13 @@ body {
 .badge-inner img {
   height: 40px;
   object-fit: contain;
-  filter: brightness(0); /* Make logo black */
+  filter: brightness(0);
+  /* Make logo black */
 }
 
 .badge-text {
-  font-family: 'Playfair Display', serif; /* Use a classy serif or cursive if available */
+  font-family: 'Playfair Display', serif;
+  /* Use a classy serif or cursive if available */
   font-size: 3.5rem;
   font-weight: 700;
   color: #000;
@@ -1359,7 +1374,8 @@ body {
 /* ─── About View ───────────────────────────────────────────────────────── */
 
 .about-view {
-  background-color: #0d0404; /* Very dark espresso/red */
+  background-color: #0d0404;
+  /* Very dark espresso/red */
   color: #fff;
   min-height: 200vh;
   position: relative;
@@ -1429,7 +1445,8 @@ body {
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.3em;
-  color: #f7ca6c; /* Gold/yellowish */
+  color: #f7ca6c;
+  /* Gold/yellowish */
   text-transform: uppercase;
 }
 
@@ -1505,7 +1522,8 @@ body {
 }
 
 .bento-card {
-  background-color: #211210; /* Darker brown/red */
+  background-color: #211210;
+  /* Darker brown/red */
   border-radius: 4px;
   padding: 2.5rem;
   display: flex;
@@ -1593,7 +1611,7 @@ body {
     flex-direction: column;
     gap: 5rem;
   }
-  
+
   .timeline-right {
     justify-content: center;
   }
@@ -1605,7 +1623,7 @@ body {
   .col-span-2 {
     grid-column: span 1;
   }
-  
+
   .card-bg-decoration {
     width: 300px;
     height: 300px;
@@ -1620,7 +1638,7 @@ body {
     flex-wrap: wrap;
     height: auto;
   }
-  
+
   .nav-brand {
     height: 1.5rem;
   }
@@ -1654,13 +1672,14 @@ body {
   }
 
   .hero-branding {
-    margin-top: -6rem; /* Shift the text further upper */
+    margin-top: -6rem;
+    /* Shift the text further upper */
   }
 
   .hero-title {
     font-size: clamp(2.2rem, 10vw, 3.5rem);
   }
-  
+
   .hero-subtitle {
     font-size: 0.65rem;
     letter-spacing: 0.3em;
@@ -1677,16 +1696,20 @@ body {
   }
 
   .center-bottle {
-    height: 45vh; /* Make glass bottle smaller */
-    top: 45%; /* Shift bottle slightly upward */
+    height: 45vh;
+    /* Make glass bottle smaller */
+    top: 45%;
+    /* Shift bottle slightly upward */
   }
 
   .product-can {
-    bottom: 33%; /* Raise cans to stand on the same grey floor as the bottle */
+    bottom: 33%;
+    /* Raise cans to stand on the same grey floor as the bottle */
   }
 
   .product-can img {
-    height: 15vh; /* Make cans smaller to fit side-by-side */
+    height: 15vh;
+    /* Make cans smaller to fit side-by-side */
   }
 
   .can-label {
@@ -1695,16 +1718,365 @@ body {
   }
 
   .can-diet {
-    left: -2%; 
+    left: -2%;
   }
 
   .can-zero {
-    right: -2%; 
+    right: -2%;
   }
 
   .center-label-standalone {
     font-size: 0.5rem;
     letter-spacing: 0.1em;
-    bottom: 33%; /* Match the cans' new position */
+    bottom: 33%;
+    /* Match the cans' new position */
+  }
+
+  /* Legacy Sections Mobile */
+  .legacy-sec-1,
+  .legacy-sec-2 {
+    padding: 4rem 1.5rem;
+    min-height: auto;
+    height: auto;
+  }
+
+  .legacy-title {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .legacy-text-wrapper {
+    border-left: none;
+    border-top: 1px solid var(--primary);
+    padding-left: 0;
+    padding-top: 2rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .legacy-text-wrapper p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 100%;
+  }
+
+  .legacy-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 2rem;
+  }
+
+  .movement-title {
+    font-size: clamp(2.5rem, 12vw, 3.5rem);
+    margin-bottom: 1.5rem;
+  }
+
+  .movement-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    padding: 0 1rem;
+  }
+
+  .btn-explore {
+    padding: 1.2rem 2.5rem;
+    font-size: 0.75rem;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  /* Footer Mobile Refined */
+  .site-footer {
+    padding: 4rem 1.5rem;
+  }
+
+  .footer-container {
+    gap: 3rem;
+  }
+
+  .footer-center {
+    gap: 1.2rem;
+  }
+
+  .footer-center a {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+
+  .footer-right p {
+    font-size: 0.65rem;
+    line-height: 1.6;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  /* Catalog Mobile Refined */
+  .catalog-view {
+    padding-top: 60px;
+    background: radial-gradient(circle at top right, #1a0505, #000000);
+  }
+
+  .catalog-container {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+    gap: 2.5rem;
+  }
+
+  .filter-sidebar {
+    position: relative;
+    top: 0;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .filter-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .filter-group {
+    margin-bottom: 2.5rem;
+  }
+
+  .filter-group-title {
+    font-size: 0.6rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+
+  .filter-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .filter-item {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.6rem 1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    gap: 0.6rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .filter-item input {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .catalog-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .catalog-card {
+    padding: 1.5rem;
+    border-radius: 2rem;
+  }
+
+  .card-image-box {
+    margin-bottom: 1.5rem;
+    aspect-ratio: 1.1;
+  }
+
+  .card-name {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-desc {
+    font-size: 0.85rem;
+    margin-bottom: 2rem;
+  }
+
+  .btn-quick, .btn-shop {
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 0.65rem;
+  }
+
+  /* Heritage Mobile Refined */
+  .heritage-hero {
+    padding: 0 1.5rem;
+  }
+
+  .heritage-bg-text {
+    font-size: 4rem;
+    opacity: 0.05;
+  }
+
+  .heritage-hero-content {
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .heritage-title {
+    font-size: clamp(2rem, 10vw, 3.2rem);
+    text-align: center;
+  }
+
+  .heritage-subtitle {
+    font-size: 0.85rem;
+    padding: 0 1rem;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .heritage-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 280px;
+    gap: 1rem;
+  }
+
+  .heritage-btn-primary, .heritage-btn-secondary {
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  .heritage-timeline {
+    padding: 4rem 1.5rem;
+    min-height: auto;
+  }
+
+  .timeline-container {
+    flex-direction: column !important;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .timeline-year {
+    font-size: 4.5rem;
+    top: -1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    opacity: 0.08;
+  }
+
+  .timeline-content {
+    padding-left: 0;
+    border-left: none;
+    border-top: 2px solid #600000;
+    padding-top: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .timeline-title {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+  }
+
+  .timeline-text {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+  }
+
+  .timeline-badge {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+  }
+
+  .badge-text {
+    font-size: 2.2rem;
+  }
+
+  .timeline-image-container {
+    height: 350px;
+    margin: 0 auto;
+  }
+
+  /* About Mobile Refined */
+  .about-hero {
+    padding: 0 1.5rem;
+  }
+
+  .about-bg-text {
+    font-size: 4rem;
+    top: 35%;
+    opacity: 0.05;
+  }
+
+  .about-hero-content {
+    margin-top: 4rem;
+    gap: 1.2rem;
+  }
+
+  .about-eyebrow {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+  }
+
+  .about-title {
+    font-size: clamp(2rem, 10vw, 3.2rem);
+    text-align: center;
+  }
+
+  .about-subtitle {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    padding: 0 0.5rem;
+    margin-top: 0.5rem;
+    text-align: center;
+  }
+
+  .about-vision {
+    padding: 5rem 1.5rem;
+    text-align: center;
+  }
+
+  .vision-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .vision-text {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin: 0 auto;
+    padding: 0 0.5rem;
+  }
+
+  .about-bento {
+    padding: 0 1.5rem 6rem 1.5rem;
+  }
+
+  .bento-grid {
+    gap: 1rem;
+  }
+
+  .bento-card {
+    padding: 1.8rem;
+    min-height: auto;
+    text-align: center;
+    align-items: center;
+    border-radius: 1.2rem;
+  }
+
+  .card-content-top {
+    margin-bottom: 1.2rem;
+  }
+
+  .card-content-bottom h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .card-content-bottom p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .card-bg-decoration {
+    display: none; /* Hide large badge on mobile bento for better layout */
   }
 }
